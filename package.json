@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/karankohli13/infura-web3-provider"
   },
   "keywords": [
     "etheruem",
@@ -21,9 +21,9 @@
   "author": "Karan K <karan@almora.io>",
   "license": "MIT",
   "bugs": {
-    "url": "gitURL/issues"
+    "url": "https://github.com/karankohli13/infura-web3-provider/issues"
   },
-  "homepage": "gitURL#readme",
+  "homepage": "https://github.com/karankohli13/infura-web3-provider#readme",
   "dependencies": {
     "bip39": "^2.5.0",
     "ethereumjs-wallet": "^0.6.0",
