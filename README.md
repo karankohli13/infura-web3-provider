@@ -17,6 +17,7 @@ var mnemonic = "opinion destroy betray ..."; // 12 word mnemonic
 var pvtKey = "6fd....."; // private key string
 var provider = new InfuraWalletProvider(mnemonic,"<infuraToken>","ropsten/mainnet");
 var provider = new InfuraWalletProvider(pvtKey,"<infuraToken>","ropsten/mainnet");
+```
 
 By default, the `InfuraWalletProvider` will use the address of the first address that's generated from the mnemonic.
 
