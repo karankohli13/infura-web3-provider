@@ -1,0 +1,33 @@
+{
+  "name": "infura-web3-provider",
+  "version": "0.0.1",
+  "description": "Infura Web3 provider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "etheruem",
+    "hd",
+    "wallet",
+    "infura",
+    "mnemonic",
+    "provider"
+  ],
+  "author": "Karan K <karan@almora.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "gitURL/issues"
+  },
+  "homepage": "gitURL#readme",
+  "dependencies": {
+    "bip39": "^2.5.0",
+    "ethereumjs-wallet": "^0.6.0",
+    "web3": "^0.18.2",
+    "web3-provider-engine": "^14.0.5"
+  }
+}
