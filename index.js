@@ -15,6 +15,7 @@ function InfuraWalletProvider(secret, token, network) {
     this.addresses = [];
     this.address = '0x' + this.wallet.getAddress().toString('hex');
     this.addresses.push(this.address);
+    if(token.constructor === Array) token = token[Math.floor(Math.random() * token.length)]
     this.provider_url = network == "mainnet" ? "https://mainnet.infura.io/" + token : "https://ropsten.infura.io/" + token;
         console.log(this.provider_url)
     const tmp_account = this.address;

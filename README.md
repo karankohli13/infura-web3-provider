@@ -25,7 +25,7 @@ Parameters:
 
 - `mnemonic`: `string`. 12 word mnemonic which addresses are created from.
 - `pvtKey`: `string`. Private key in string.
-- `infuraToken`: `string`. Your infura token generated from the website.
+- `infuraToken`: `string` or 'array'. Your infura token generated from the website.
 - `network`: `string`, Network can be "ropsten" or "mainnet". Default "ropsten"
 
 ## Truffle Usage
