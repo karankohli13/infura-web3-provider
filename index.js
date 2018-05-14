@@ -10,20 +10,20 @@ var Transaction = require('ethereumjs-tx');
 
 function InfuraWalletProvider(secret, token, network) {
   if (secret.trim().split(/\s+/).length == 1) {
-    this.pvtKey = secret;
-    this.wallet = walletUtils.fromPrivateKey(Buffer.from(secret, 'hex'));
+    this.pvtKey = secret.substring(0, 2) == '0x' ? secret.substring(2) : secret;
+    this.wallet = walletUtils.fromPrivateKey(Buffer.from(this.pvtKey, 'hex'));
     this.addresses = [];
     this.address = '0x' + this.wallet.getAddress().toString('hex');
     this.addresses.push(this.address);
-    if(token.constructor === Array) token = token[Math.floor(Math.random() * token.length)]
+    if (token.constructor === Array) token = token[Math.floor(Math.random() * token.length)]
     this.provider_url = network == "mainnet" ? "https://mainnet.infura.io/" + token : "https://ropsten.infura.io/" + token;
-        console.log(this.provider_url)
+    console.log(this.provider_url)
+    const tmp_accounts = this.addresses;
     const tmp_account = this.address;
     const tmp_wallet = this.wallet;
-
     this.engine = new ProviderEngine();
     this.engine.addProvider(new HookedSubprovider({
-      getAccounts: function(cb) { cb(null, tmp_account) },
+      getAccounts: function(cb) { cb(null, tmp_accounts) },
       getPrivateKey: function(address, cb) {
         if (tmp_account != address) { return cb('Account not found'); } else { cb(null, tmp_wallet.getPrivateKey().toString('hex')); }
       },

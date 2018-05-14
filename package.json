@@ -1,6 +1,6 @@
 {
   "name": "infura-web3-provider",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Infura Web3 provider",
   "main": "index.js",
   "scripts": {
